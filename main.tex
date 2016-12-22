@@ -1,0 +1,313 @@
+%########## tipo de documento ##########
+%Sintaxe = documentclass[configuração do papel][tipo de documento]
+
+%Configurações disponiveis: 12pt, 14,pt, a4paper, letterpaper, legalpaper
+
+%Tipo de documento: article, minimal, report, book, slides, letter, beamer, exam
+
+\documentclass[12pt, a4paper]{article}
+
+%#### CONFIGURAÇÃO DE IDIOMA E ACENTUAÇÃO ###
+
+\usepackage[utf8x]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+
+%#### CONFIGURAÇÃO DE GRÁFICOS ###
+
+\usepackage{graphicx}
+
+%#### CONFIGURAÇÕES MATEMÁTICAS ####
+
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+
+%#### CONFIGURAÇÕES REFERENCIAS BIBLIOGRÁFICAS ####
+
+\usepackage{natbib}
+
+%#### CONFIGURAÇÕES EXTRAS GERAIS ####
+
+\usepackage{multicol} %Usar colunas
+\usepackage{color} %%Usar cores
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{csquotes}
+
+
+%#### CONFIGURAÇÕES DO AUTOR ####
+
+\title{MODELO GERAL OVERLEAF} %Nome do seu projeto
+\author{César Felipe Gonçalves da Silva}
+\date{19 de dezembro de 2016}
+
+%### INICIO DO DOCUMENTO ###
+
+\begin{document}
+
+%### PAGINA DE TITULO ###
+%### COMENTE SE NAO QUISER PAGINA DE TITULO ###
+
+%\maketitle
+
+\begin{titlepage}
+\begin{center}
+	
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{logo-ufal.png} 
+\end{figure}
+
+\large{Mestrado em Modelagem computacional do conhecimento}\\ 
+
+\large{Leitura e Escrita de Trabalho Científico}\\ 
+
+\vspace{110pt}
+        
+\textbf{\LARGE{Gerência e configuração de thin switches}}\\
+
+\vspace{3,5cm}
+\end{center}
+	
+\begin{flushleft}
+Aluno: César Felipe Gonçalves da Silva\\
+Professor orientador: Professor Doutor Rafael Amorim Silva \\
+\end{flushleft}
+
+	
+\begin{center}
+\vspace{\fill}
+Dezembro\\
+2016
+
+\end{center}
+\end{titlepage}
+
+%### FIM DA SEÇÃO DA PAGINA DE TITULO ###
+
+%### FOLHA DE ROSTO ###
+%### COMENTE SE NAO QUISER FOLHA DE ROSTO ###
+
+\begin{titlepage}
+\begin{center}
+	
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{logo-ufal.png} \end{figure}
+
+\large{Mestrado em Modelagem computacional do conhecimento}\\ 
+\large{Leitura e Escrita de Trabalho Científico}\\ 
+\vspace{100pt}
+
+        
+\textbf{\LARGE{Relatório}}
+\title{\large{Título}}
+
+			
+\end{center}
+\vspace{1,5cm}
+	
+\begin{flushright}
+
+\begin{list}{}{
+\setlength{\leftmargin}{4.5cm}
+\setlength{\rightmargin}{0cm}
+\setlength{\labelwidth}{0pt}
+\setlength{\labelsep}{\leftmargin}}
+
+\item Primeiro Relatório da Disciplina Leitura e Escrita de Trabalho Científico.
+
+\begin{list}{}{
+\setlength{\leftmargin}{0cm}
+\setlength{\rightmargin}{0cm}
+\setlength{\labelwidth}{0pt}
+\setlength{\labelsep}{\leftmargin}}
+
+\item Aluno: César Felipe Gonçalves da Silva\
+\item Professor orientador: Professor Doutor Rafael Amorim Silva\
+      		
+
+\end{list}
+\end{list}
+\end{flushright}
+\vspace{1cm}
+
+
+\begin{center}
+\vspace{\fill}
+Dezembro\\
+2016
+\end{center}
+\end{titlepage}
+
+%### FIM DA SEÇÃO DE FOLHA DE ROSTO ###
+
+%### INICIO DA SEÇÃO DE SUMÁRIO ###
+%### COMENTE CASO NAO QUEIRA SUMÁRIO ###
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+%### FIM DA SEÇÃO DE SUMÁRIO ###
+
+\section{Como fazer abstract}
+
+Abaixo um exemplo de abstract:
+
+\begin{abstract}
+texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract - texto do abstract
+\end{abstract}
+
+\newpage
+\section{como fazer listas}
+
+\begin{itemize} % Lista pontilhada
+\item escreva aqui o primeiro item \\
+\item escreva aqui o segundo item \\
+\item escreva aqui o terceiro item \\
+\end{itemize}
+
+\begin{enumerate}
+\item escreva aqui o primeiro item \\
+\item escreva aqui o segundo item \\
+\item escreva aqui o terceiro item \\
+\end{enumerate}
+
+\begin{description}
+\item[ITEM 1] escreva aqui o primeiro item \\
+\item[ITEM 2]  escreva aqui o segundo item \\
+\item[ITEM 3]  escreva aqui o terceiro item \\
+\end{description}
+
+\newpage
+\section{Como fazer seções}
+
+Acima o comando para iniciar a seção. Neste ponto daqui, é só começar a digitar seu texto
+
+\subsection{Como fazer subseções}
+
+Acima o comando para iniciar a subseção. Neste ponto daqui, é só começar a digitar seu texto
+
+\subsubsection{Como fazer sub-subseções}
+
+Acima o comando para iniciar a sub-subseção. Neste ponto daqui, é só começar a digitar seu texto
+
+\newpage
+\section{Como fazer negrito, italico, sublinhado e ênfase}
+
+Aqui um exemplo de \textbf{negrito} \newline
+Aqui um exemplo de \textit{Italico} \newline
+Aqui um exemplo de \underline{Sublinhado} \newline
+Aqui um exemplo de \textbf{\textit{Negrito com italico}} \newline
+Aqui um exemplo de \textbf{\underline{Negrito com sublinhado}} \newline
+Aqui um exemplo de \textbf{\textit{\underline{Negrito com italico e sublinhado}}} \newline
+Aqui um exemplo de \emph{ênfase em um trecho} do texto \newline
+
+\textbf{Observação:} Observe que a primeira linha dos exemplos acima "Automaticamente" ficou adiantada (Inicio de paragrafo) e veja que abaixo não ficou... Para isto, foi utilizado o comando "noindent" no inicio do parágrafo (Neste caso, da linha). \newline
+
+
+\noindent Aqui um exemplo de \textbf{negrito} \newline
+Aqui um exemplo de \textit{Italico} \newline
+Aqui um exemplo de \underline{Sublinhado} \newline
+Aqui um exemplo de \textbf{\textit{Negrito com italico}} \newline
+Aqui um exemplo de \textbf{\underline{Negrito com sublinhado}} \newline
+Aqui um exemplo de \textbf{\textit{\underline{Negrito com italico e sublinhado}}} \newline
+Aqui um exemplo de \emph{ênfase em um trecho} do texto
+
+
+\newpage
+\section{Como definir espaçamento vertical entre linhas}
+
+Esta é a primeira linha. Agora imagine que voce precisa que a segunda comece com 1.53 cm de distancia abaixo daqui.
+\vspace{1.53cm}
+
+Aqui esta a segunda linha, 2.18cm de distancia abaixo. Se quiser mais uma ultima linha, PERFEITAMENTE ao final desta página...
+\vspace{\fill} %Sempre distancie a proxima linha abaixo a 1 ENTRE de distancia desta!
+
+Esta linha ficara sempre no final da pagina.
+
+\newpage
+\section{Como trabalhar com parágrafos, alinhamento e recuo de texto}
+
+Veja os exemplos abaixo:
+
+\paragraph{Sem definir alinhamento:}
+Este texto está justificado automaticamente e vejam a que interessante. Este texto está justificado automaticamente e vejam a que interessante. Este texto está justificado automaticamente e vejam a que interessante. 
+
+\paragraph{Alinhando à esquerda}
+\begin{flushleft}
+Este texto está alinhado à esquerda e vejam a que interessante. Este texto está alinhado à esquerda e vejam a que interessante. Este texto está alinhado à esquerda e vejam a que interessante. 
+\end{flushleft}
+
+\paragraph{Alinhando à direita}
+\begin{flushright}
+Este texto está alinhado à direita e vejam a que interessante. Este texto está alinhado à direita e vejam a que interessante. Este texto está alinhado à direita e vejam a que interessante. 
+\end{flushright}
+
+\paragraph{Alinhando ao centro}
+\begin{center}
+Este texto está alinhado ao centro e vejam a que interessante. Este texto está alinhado ao centro e vejam a que interessante. Este texto está alinhado ao centro e vejam a que interessante. 
+\end{center}
+
+\paragraph{Definindo recuo personalizado:}
+Imagine que voce precise definir um recuo maior para seu texto... veja exemplo abaixo:
+
+
+\newpage
+\section{Como fazer grandes blocos de comentários}
+
+Para isto, veja o codigo referente à esta seção. Há um bloco de texto aqui embaixo que está no código do documento, mas que não nao aparecerá... \newline
+
+\iffalse % -- Inicio do bloco comentado --
+
+Tudo que esta aqui nao aparece...
+$$\int_{-\infty}^\infty\mathrm{d}x\,x^{-2}$$ 
+Esta será a ultima linha oculta
+
+\fi % % -- Fim do bloco comentado --
+
+Acima deste texto, há um bloco de conteúdo que esta oculto pelos comandos iffalse e fi !!!
+
+\newpage
+\section{Como fazer citações recuadas}
+
+Esta seção não aborda as citações das referências bibliográficas. Aborda aqueles trechos de texto RECUADOS devidos as citações. Existem dois comandos basicos:
+
+\begin{enumerate}
+\item Comando quote
+\item Comando quotation
+\end{enumerate}
+
+\paragraph{}
+Exemplo com quote:
+
+\begin{quote}
+"Aqui foi usado o comando quote Aqui foi usado o comando quote Aqui foi usado o comando quote Aqui foi usado o comando quote Aqui foi usado o comando quote"
+\end{quote} 
+
+\paragraph{}
+Exemplo com quotation:
+
+\begin{quotation}
+"Aqui foi usado o comando quotation Aqui foi usado o comando quotation Aqui foi usado o comando quotation Aqui foi usado o comando quotation Aqui foi usado o comando quotation Aqui foi usado o comando quotation Aqui foi usado o comando quotation Aqui foi usado o comando quotation "
+\end{quotation} 
+
+\newpage
+é aço não! freqüência
+
+kurose-artigo \cite{kurose-artigo}
+kurose-livro \cite{kurose-livro}
+kurose-misc \cite{kurose-site}
+kurose-procedings \cite{kurose-inprocedings}
+
+
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}
